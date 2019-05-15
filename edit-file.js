@@ -20,6 +20,7 @@ async function readUpdateAndReread(file) {
     // Update
     await writeFileAsync(file, randomNumber);
 
+    // Read again
     const contentAfter = await readFileAsync(file, { encoding: 'utf8' });
     console.log('Content after:', contentAfter);
   } catch (err) {
